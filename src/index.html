@@ -9,7 +9,7 @@
 <body>
   @@include('img/sprite-svg.svg')
 
-  <div class="container">
+  <div class="container" id="container">
     <div class="btn-block">
       <button class="toggle-btn js-toggle-btn-pie active">pie</button>
       <button class="toggle-btn js-toggle-btn-bar">bar</button>
@@ -20,10 +20,13 @@
       <input type="text" value="" class="input-block__item input-block__item--3">
       <input type="text" value="" class="input-block__item input-block__item--4">
       <input type="text" value="" class="input-block__item input-block__item--5">
-    </div>
-    <div class="chart">
 
     </div>
+    <button class="add-input">Add</button>
+    <div class="chart" id="chart">
+
+    </div>
+    <a href="#" id='saveButton'>Export my D3 visualization to PNG</a>
   </div>
   <script src="js/script.min.js"></script>
 </body>
