@@ -126,6 +126,7 @@ gulp.task('js', function () {
       dirs.source + '/js/d3.min.js',
       dirs.source + '/js/jquery-3.1.0.min.js',
       dirs.source + '/js/jquery-migrate-1.4.1.min.js',
+      dirs.source + '/js/html2canvas.min.js',
       dirs.source + '/js/app.js',
       dirs.source + '/js/script.js',
     ])
