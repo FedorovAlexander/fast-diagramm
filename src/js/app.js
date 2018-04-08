@@ -229,10 +229,11 @@ function barchart() {
 //          timeout: 500
 //     });
 //             });
+console.log()
 
-
-$(document).ready(function() {
+$(document.body).ready(function() {
   $('#saveButton').click(function(){
+
         html2canvas($('#container'),
         {
           onrendered: function (canvas) {
