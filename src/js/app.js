@@ -4,9 +4,20 @@ var barBtn = document.querySelector(".js-toggle-btn-bar");
 var pieBtn = document.querySelector(".js-toggle-btn-pie");
 var chart = document.querySelector(".chart")
 var input = document.querySelectorAll(".input-block__item");
+var inputBlock = document.querySelector(".input-block");
+var addInput = document.querySelector(".add-input");
 var color = d3.scaleOrdinal(d3.schemeAccent)
 var margin = 30;
 var data = [1,2,3,4,5];
+
+addInput.addEventListener("click", function() {
+  var newInput = document.createElement('input')
+  newInput.className = "input-block__item"
+  newInput.value = "1"
+  inputBlock.appendChild(newInput)
+  data.push(newInput.value)
+
+})
 
 function pushData() {
     var inputVal = document.querySelectorAll('.input-block__item');
@@ -18,17 +29,25 @@ function pushData() {
 piechart()
 
 pieBtn.addEventListener('click', function() {
-    chart.innerHTML = " ";
-		this.classList.toggle("active")
-    barBtn.classList.remove("active")
-    piechart()
+    if(this.classList.contains("active")) {
+      return false;
+    } else {
+       chart.innerHTML = " ";
+       this.classList.toggle("active")
+       barBtn.classList.remove("active")
+       piechart()
+    }
 })
 
 barBtn.addEventListener('click', function() {
+   if(this.classList.contains("active")) {
+      return false;
+    } else {
     chart.innerHTML = " ";
 		this.classList.toggle("active")
     pieBtn.classList.remove("active")
     barchart()
+    }
 })
 
 function piechart() {
@@ -148,14 +167,6 @@ function barchart() {
 			   .attr("fill", "white");
       //axis
 
-//     svg.append("g")
-//     .attr("transform", "translate(" + margin + "," + margin + ")")
-//     .call(d3.axisLeft(yScale));
-
-//     svg.append("g")
-//     .attr("transform", "translate(" + margin + "," + (height+margin) + ")")
-//     .call(d3.axisBottom(xScale));
-
         d3.selectAll(".input-block__item")
         .on("input", function () {
           data = []
@@ -202,11 +213,35 @@ function barchart() {
       return height - yScale(d) + 14;
     });
   }
-//   svg.append("g")
-//     .attr("transform", "translate(" + margin + "," + margin + ")")
-//     .call(d3.axisLeft(yScale));
-
-// svg.append("g")
-//     .attr("transform", "translate(" + margin + "," + (height+margin) + ")")
-//     .call(d3.axisBottom(xScale));
 }
+
+
+
+// EXPORT
+
+
+// d3.select('#saveButton').on('click', function () {
+//              html2canvas(document.getElementById("chart"), {
+
+//         onrendered: function (canvas) {
+//             chart.appendChild(canvas);
+//         },
+//          timeout: 500
+//     });
+//             });
+
+
+$(document).ready(function() {
+  $('#saveButton').click(function(){
+        html2canvas($('#container'),
+        {
+          onrendered: function (canvas) {
+            var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
+            .attr("download", "output.png")
+            .appendTo("body");
+            a[0].click();
+            a.remove();
+          }
+        });
+  });
+});
