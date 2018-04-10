@@ -1,5 +1,5 @@
-let width = 560,
-  height = 500;
+const width = 560;
+const height = 500;
 const barBtn = document.querySelector('.js-toggle-btn-bar');
 const pieBtn = document.querySelector('.js-toggle-btn-pie');
 const chart = document.querySelector('.chart');
@@ -90,7 +90,6 @@ function piechart() {
 
   d3.selectAll('.input-block__item')
     .on('input', () => {
-      data = [];
       pushData();
       updatePie(data);
     });
@@ -128,27 +127,27 @@ function barchart() {
 
   // Create bars
   svg.selectAll('rect')
-			   .data(data)
-			   .enter()
-			   .append('rect')
-			   .attr('x', (d, i) => xScale(i))
-			   .attr('y', d => height - yScale(d))
-			   .attr('width', xScale.bandwidth())
-			   .attr('height', d => yScale(d))
-			   .style('fill', (d, i) => color(i));
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr('x', (d, i) => xScale(i))
+    .attr('y', d => height - yScale(d))
+    .attr('width', xScale.bandwidth())
+    .attr('height', d => yScale(d))
+    .style('fill', (d, i) => color(i));
 
   // Create labels
   svg.selectAll('text')
-			   .data(data)
-			   .enter()
-			   .append('text')
-			   .text(d => d)
-			   .attr('text-anchor', 'middle')
-			   .attr('x', (d, i) => xScale(i) + xScale.bandwidth() / 2)
-			   .attr('y', d => height - yScale(d) + 14)
-			   .attr('font-family', 'sans-serif')
-			   .attr('font-size', '11px')
-			   .attr('fill', 'white');
+    .data(data)
+    .enter()
+    .append('text')
+    .text(d => d)
+    .attr('text-anchor', 'middle')
+    .attr('x', (d, i) => xScale(i) + xScale.bandwidth() / 2)
+    .attr('y', d => height - yScale(d) + 14)
+    .attr('font-family', 'sans-serif')
+    .attr('font-size', '11px')
+    .attr('fill', 'white');
   // axis
 
   d3.selectAll('.input-block__item')
@@ -202,7 +201,6 @@ function barchart() {
 //          timeout: 500
 //     });
 //             });
-console.log();
 
 $(document.body).ready(() => {
   $('#saveButton').click(() => {
