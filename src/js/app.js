@@ -8,9 +8,10 @@ var inputBlock = document.querySelector(".input-block");
 var addInput = document.querySelector(".add-input");
 var color = d3.scaleOrdinal(d3.schemeSet3)
 var margin = 30;
-var data = [];
+var data = [1,2,3,4,5];
 
 function pushData() {
+  // data = []
     var inputVal = document.querySelectorAll('.input-block__item');
     for (i=0; i<inputVal.length; i++) {
       data.push(inputVal[i].value)
@@ -85,7 +86,7 @@ function piechart() {
 $(document.body).ready(function() {
   $('#saveButton').click(function(){
 
-        html2canvas($('#container'),
+        html2canvas($('#chart'),
         {
           onrendered: function (canvas) {
             var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
