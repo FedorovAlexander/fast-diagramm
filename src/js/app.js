@@ -6,9 +6,9 @@ var chart = document.querySelector(".chart")
 var input = document.querySelectorAll(".input-block__item");
 var inputBlock = document.querySelector(".input-block");
 var addInput = document.querySelector(".add-input");
-var color = d3.scaleOrdinal(d3.schemeAccent)
+var color = d3.scaleOrdinal(d3.schemeSet3)
 var margin = 30;
-var data = [1,2,3,4,5];
+var data = [];
 
 function pushData() {
     var inputVal = document.querySelectorAll('.input-block__item');
@@ -16,7 +16,7 @@ function pushData() {
       data.push(inputVal[i].value)
     }
   }
-
+pushData()
 piechart()
 
 pieBtn.addEventListener('click', function() {
