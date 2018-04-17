@@ -1,0 +1,11 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &__title {
+
+  }
+  &__item {
+    max-width: 100px;
+  }
+}
