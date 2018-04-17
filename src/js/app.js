@@ -2,7 +2,7 @@ var width = 560,
     height = 500
 var barBtn = document.querySelector(".js-toggle-btn-bar");
 var pieBtn = document.querySelector(".js-toggle-btn-pie");
-var chart = document.querySelector(".chart")
+var chart = document.querySelector(".result")
 var input = document.querySelectorAll(".input-block__item");
 var inputBlock = document.querySelector(".input-block");
 var addInput = document.querySelector(".add-input");
@@ -11,7 +11,6 @@ var margin = 30;
 var data = [1,2,3,4,5];
 
 function pushData() {
-  // data = []
     var inputVal = document.querySelectorAll('.input-block__item');
     for (i=0; i<inputVal.length; i++) {
       data.push(inputVal[i].value)
@@ -32,7 +31,7 @@ function piechart() {
       .sort(null)
       .value(function(d,i) { return d; });
 
-  var svg = d3.select(".chart").append("svg")
+  var svg = d3.select(".result").append("svg")
       .attr("width", width)
       .attr("height", height)
       .append("g")
@@ -86,7 +85,7 @@ function piechart() {
 $(document.body).ready(function() {
   $('#saveButton').click(function(){
 
-        html2canvas($('#chart'),
+        html2canvas($('#result__output'),
         {
           onrendered: function (canvas) {
             var a = $("<a>").attr("href", canvas.toDataURL('image/png'))
