@@ -10,13 +10,6 @@ var color = d3.scaleOrdinal(d3.schemeAccent)
 var margin = 30;
 var data = [1,2,3,4,5];
 
-function addInputField() {
-  var newInput = document.createElement('input')
-  newInput.className = "input-block__item"
-  inputBlock.appendChild(newInput)
-  newInput.value = "1"
-}
-
 function pushData() {
     var inputVal = document.querySelectorAll('.input-block__item');
     for (i=0; i<inputVal.length; i++) {
