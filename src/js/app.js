@@ -19,17 +19,6 @@ function pushData() {
 pushData()
 piechart()
 
-pieBtn.addEventListener('click', function() {
-    if(this.classList.contains("active")) {
-      return false;
-    } else {
-       chart.innerHTML = " ";
-       this.classList.toggle("active")
-       barBtn.classList.remove("active")
-       piechart()
-    }
-})
-
 function piechart() {
 
   var radius = Math.min(width, height) / 2;
