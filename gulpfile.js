@@ -227,7 +227,7 @@ gulp.task('serve', gulp.series('build', function() {
   );
 
   gulp.watch(                                               // следим за JS
-    dirs.source + /js/*.js,
+    dirs.source + '/js/*.js',
     gulp.series('js', reloader)                            // при изменении пересобираем и обновляем в браузере
   );
 
