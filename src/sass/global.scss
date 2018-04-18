@@ -1,6 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   min-width: 320px;
   margin: 0;
+  background-color: $main-bg-color;
   font-family: $font-family;
   color: $text-color;
 }
