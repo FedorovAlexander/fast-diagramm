@@ -5,4 +5,11 @@
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
+
+  &__output {
+    background-color: #fff;
+  }
+  &__output-title {
+    min-height: 40px;
+  }
 }

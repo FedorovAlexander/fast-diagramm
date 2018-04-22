@@ -34,10 +34,15 @@
           <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--8"></label>
           <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--9"></label>
           <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--10"></label>
+          <h4 class="input-block__input-chart-title">Введи название диаграммы</h4>
+          <label for="" class="input-block__label"><input type="text" class="input-block__input-title" oninput="titleInput()"></label>
         </div>
         <div class="result" id="result">
           <h2 class="result__title">Результат</h2>
-            <div class="result__output">
+            <div class="result__output" id="result__output">
+              <h3 class="result__output-title">
+
+              </h3>
             </div>
             <button href="#" id='saveButton'>Скачать PNG</button>
 
@@ -54,7 +59,7 @@
   </main>
   <footer class="page-footer">
     <div class="footer__container container">
-      
+
     </div>
   </footer>
   <script src="js/script.min.js"></script>
