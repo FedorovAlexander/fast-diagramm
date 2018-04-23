@@ -10,12 +10,7 @@ var color = d3.scaleOrdinal(d3.schemeSet3)
 var margin = 30;
 var data = [1,2,3,4,5];
 
-function pushData() {
-    var inputVal = document.querySelectorAll('.input-block__item');
-    for (i=0; i<inputVal.length; i++) {
-      data.push(inputVal[i].value)
-    }
-  }
+
 pushData()
 piechart()
 
