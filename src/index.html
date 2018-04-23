@@ -23,26 +23,89 @@
     <section class="chart">
       <div class="chart__container container" id="container">
         <div class="input-block">
-          <h2 class="input-block__title">Введи данные</h2>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--1"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--2"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--3"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--4"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--5"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--6"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--7"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--8"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--9"></label>
-          <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--10"></label>
-          <h4 class="input-block__input-chart-title">Введи название диаграммы</h4>
-          <label for="" class="input-block__label"><input type="text" class="input-block__input-title" oninput="titleInput()"></label>
+          <div class="input-block__input-title-block">
+            <h4 class="input-block__input-chart-title">Введи название диаграммы</h4>
+            <label for="" class="input-block__label"><input type="text" class="input-block__input-title" oninput="titleInput()"></label>
+          </div>
+          <div class="input-block__wrapper">
+            <div class="input-block__data">
+              <h4 class="input-block__title">Данные</h4>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--1"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--2"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--3"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--4"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--5"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--6"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--7"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--8"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--9"></label>
+              <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--10"></label>
+            </div>
+            <div class="input-block__names-block">
+              <h4 class="input-block__title">Обозначения</h4>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+              <label for="" class="input-block__label"><input type="text" class="input-block__name"></label>
+            </div>
+          </div>
         </div>
         <div class="result" id="result">
           <h2 class="result__title">Результат</h2>
             <div class="result__output" id="result__output">
-              <h3 class="result__output-title">
+              <h3 class="result__output-title"></h3>
+              <div class="result__chart-legend-block">
+                <div class="result__output-chart"></div>
+                <div class="result__legend legend">
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--1"></span>
+                    <p class="legend__item-name legend__item-name--1"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--2"></span>
+                    <p class="legend__item-name legend__item-name--2"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--3"></span>
+                    <p class="legend__item-name legend__item-name--3"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--4"></span>
+                    <p class="legend__item-name legend__item-name--4"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--5"></span>
+                    <p class="legend__item-name legend__item-name--5"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--6"></span>
+                    <p class="legend__item-name legend__item-name--6"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--7"></span>
+                    <p class="legend__item-name legend__item-name--7"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--8"></span>
+                    <p class="legend__item-name legend__item-name--8"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--9"></span>
+                    <p class="legend__item-name legend__item-name--9"></p>
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__item-color legend__item-color--10"></span>
+                    <p class="legend__item-name legend__item-name--10"></p>
+                  </div>
+                </div>
+              </div>
 
-              </h3>
             </div>
             <button href="#" id='saveButton'>Скачать PNG</button>
 

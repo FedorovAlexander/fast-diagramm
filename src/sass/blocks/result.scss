@@ -12,4 +12,15 @@
   &__output-title {
     min-height: 40px;
   }
+  &__output-chart {
+    flex: 3;
+  }
+  &__legend {
+    flex:2;
+  }
+  &__chart-legend-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

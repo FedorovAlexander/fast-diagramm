@@ -1,5 +1,5 @@
-var width = 560,
-    height = 500
+var width = 480,
+    height = 480
 var barBtn = document.querySelector(".js-toggle-btn-bar");
 var pieBtn = document.querySelector(".js-toggle-btn-pie");
 var chart = document.querySelector(".result")
@@ -26,7 +26,7 @@ function piechart() {
       .sort(null)
       .value(function(d,i) { return d; });
 
-  var svg = d3.select(".result__output").append("svg")
+  var svg = d3.select(".result__output-chart").append("svg")
       .attr("width", width)
       .attr("height", height)
       .append("g")
