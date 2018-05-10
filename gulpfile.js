@@ -102,6 +102,7 @@ gulp.task('svgstore', function (callback) {
       .pipe(cheerio(function ($) {
         $('svg').attr('style',  'display:none');             // дописываем получающемуся SVG-спрайту инлайновое сокрытие
       }))
+      .pipe(replace('&gt;', '>'))
       .pipe(rename('sprite-svg.svg'))
       .pipe(gulp.dest(dirs.source + '/img'));
   }
