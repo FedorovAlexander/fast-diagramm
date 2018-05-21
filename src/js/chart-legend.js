@@ -10,3 +10,18 @@ function nameInput() {
     name.innerHTML = nameVal[i]
   })
 }
+
+// color definition
+function chartLegend() {
+  var legendSvg = d3.selectAll(".legend__item-color")
+                           .append("svg")
+                           .attr("width", 15)
+                           .attr("height", 15)
+                           .data(dataName)
+                           .attr('class', 'legend');
+
+      legendSvg.append('rect')
+                .attr('width', 15)
+                .attr('height', 15)
+                .style("fill", function(d,i) { return color(i); });
+}

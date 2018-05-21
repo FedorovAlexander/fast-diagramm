@@ -9,9 +9,10 @@ var addInput = document.querySelector(".add-input");
 var color = d3.scaleOrdinal(d3.schemeSet3)
 var margin = 30;
 var data = [1,2,3,4,5];
-
+var dataName = [];
 
 pushData()
+pushName()
 piechart()
 
 function piechart() {
@@ -75,4 +76,5 @@ function piechart() {
         .ease(d3.easeBack)
         .attrTween("d", arc2Tween);
   }
+  chartLegend();
 }
