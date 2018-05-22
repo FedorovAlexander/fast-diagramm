@@ -1,6 +1,7 @@
 .legend {
   &__item-name {
-    // height: 20px;
+    max-width: 150px;
+    word-wrap: break-word;
     display: inline-block;
   }
 }
