@@ -1,6 +1,20 @@
 .filters {
   margin-top: 20px;
   &__container {
-background-color: #fff;
+  background-color: #fff;
+  }
+  &__items-block {
+    display: flex;
+    flex-direction: space-around;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  &__item {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+    background-color: #dcdee2;
   }
 }
