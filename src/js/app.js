@@ -1,5 +1,5 @@
-var width = 480,
-    height = 480
+var width = 480
+var height = 480
 var barBtn = document.querySelector(".js-toggle-btn-bar");
 var pieBtn = document.querySelector(".js-toggle-btn-pie");
 var chart = document.querySelector(".result")
