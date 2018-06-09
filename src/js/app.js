@@ -7,6 +7,7 @@ var input = document.querySelectorAll(".input-block__item");
 var inputBlock = document.querySelector(".input-block");
 var addInput = document.querySelector(".add-input");
 var colorDefault = d3.scaleOrdinal(d3.schemeSet3);
+var colorHaiku = d3.scaleOrdinal(['#756f25', '#c7c15d', '#00473f', '#237782', '#349085', '#98baa1', '#206284', '#517c82', '#2f94c6', '#00a6bc'])
 var margin = 30;
 var data = [1,2,3,4,5];
 var dataName = [];
