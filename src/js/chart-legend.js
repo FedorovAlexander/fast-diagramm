@@ -30,6 +30,6 @@ function chartLegend() {
     .attr('width', 15)
     .attr('height', 15)
     .style("fill", function(d, i) {
-      return color(i);
+      return colorDefault(i);
     });
 }

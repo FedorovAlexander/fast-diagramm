@@ -6,7 +6,7 @@ var chart = document.querySelector(".result")
 var input = document.querySelectorAll(".input-block__item");
 var inputBlock = document.querySelector(".input-block");
 var addInput = document.querySelector(".add-input");
-var color = d3.scaleOrdinal(d3.schemeSet3)
+var colorDefault = d3.scaleOrdinal(d3.schemeSet3);
 var margin = 30;
 var data = [1,2,3,4,5];
 var dataName = [];
@@ -43,7 +43,7 @@ function piechart() {
       .attr("class", "arc")
       .append("path")
       .attr("d", arc)
-      .style("fill", function(d,i) { return color(i); });
+      .style("fill", function(d,i) { return colorDefault(i); });
 
   // initial data update
   updatePie(data);
