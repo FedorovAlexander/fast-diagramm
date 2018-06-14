@@ -16,4 +16,7 @@ filtersBtn.on("click", function(_, i) {
   d3.selectAll(".arc path").style("fill", function(_, j) {
     return colorSet[i](j)
   })
+  d3.selectAll(".legend__item-color rect").style("fill", function(_, j) {
+    return colorSet[i](j)
+  })
 });
