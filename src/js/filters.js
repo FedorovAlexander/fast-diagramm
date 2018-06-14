@@ -1,19 +1,4 @@
-const filtersBtn = document.querySelectorAll('.filters__item')
-
-//remove active class from all links
-function removeActive() {
-  filtersBtn.forEach(function(item) {
-    item.classList.remove('active')
-  })
-}
-
-//add active class to the clicked item
-filtersBtn.forEach(function(item,i) {
-  item.addEventListener('click', function() {
-    removeActive();
-    this.classList.add('active')
-  })
-})
+const filtersBtn = d3.selectAll(".filters__item");
 
 //toggle css class
 function firstDesign() {
@@ -26,3 +11,9 @@ document.querySelector('.filters__item--1').addEventListener('click', function(e
   e.preventDefault()
   firstDesign()
 })
+
+filtersBtn.on("click", function(_, i) {
+  d3.selectAll(".arc path").style("fill", function(_, j) {
+    return colorSet[i](j)
+  })
+});
