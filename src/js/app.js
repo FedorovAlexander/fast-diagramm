@@ -1,5 +1,6 @@
 var width = 480
 var height = 480
+var radius = Math.min(width, height) / 2;
 var barBtn = document.querySelector(".js-toggle-btn-bar");
 var pieBtn = document.querySelector(".js-toggle-btn-pie");
 var chart = document.querySelector(".result")
@@ -21,7 +22,7 @@ piechart()
 
 function piechart() {
 
-  var radius = Math.min(width, height) / 2;
+
 
   var arc = d3.arc()
       .outerRadius(radius - 10)
