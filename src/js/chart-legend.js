@@ -24,7 +24,7 @@ function chartLegend() {
     .attr("width", 15)
     .attr("height", 15)
     .data(dataName)
-    .attr('class', 'legend');
+    .attr('class', 'legend__color');
 
   legendSvg.append('rect')
     .attr('width', 15)
