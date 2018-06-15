@@ -8,8 +8,13 @@
 
   &__output {
     background-color: #fff;
-    border: 1px solid #d5d5d5
+    border: 1px solid #d5d5d5;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
+
   &__output-title {
     min-height: 40px;
   }
