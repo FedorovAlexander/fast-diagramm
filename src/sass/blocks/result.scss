@@ -1,13 +1,14 @@
 .result {
   background-color: #fff;
   flex: 5;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
 
   &__output {
     background-color: #fff;
+    border: 1px solid #d5d5d5
   }
   &__output-title {
     min-height: 40px;
