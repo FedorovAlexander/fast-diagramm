@@ -25,7 +25,7 @@ function piechart() {
 
 
   var arc = d3.arc()
-      .outerRadius(radius - 10)
+      .outerRadius(radius - 30)
       .innerRadius(0);
 
   var pie = d3.pie()
