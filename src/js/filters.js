@@ -1,4 +1,5 @@
 const filtersBtn = d3.selectAll(".filters__item");
+const filtersBtnAll = document.querySelectorAll(".filters__item");
 const colorBtn1 = d3.selectAll(".filters__item--2");
 const result = document.querySelector('.result__output');
 const resultTitle = document.querySelector('.result__output-title');
@@ -17,6 +18,13 @@ function secondDesign() {
 }
 
 //prevent default action
+filtersBtnAll.forEach(function(link) {
+  link.addEventListener('click',function(e) {
+    e.preventDefault()
+  })
+
+})
+
 document.querySelector('.filters__item--2').addEventListener('click', function(e){
   e.preventDefault()
   secondDesign()
