@@ -14,11 +14,13 @@
     padding-top: 20px;
     padding-bottom: 20px;
     min-height: 570px;
+    word-wrap: break-word;
   }
 
   &__output-title {
     min-height: 50px;
     font-size: 2rem;
+    word-break: break-all;
   }
   &__output-chart {
     flex: 3;
@@ -26,6 +28,7 @@
   }
   &__legend {
     flex:2;
+    word-wrap: break-word;
   }
   &__chart-legend-block {
     display: flex;
