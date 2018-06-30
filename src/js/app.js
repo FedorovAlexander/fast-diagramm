@@ -1,5 +1,5 @@
-var width = 480
-var height = 480
+var width = 420
+var height = 420
 var radius = Math.min(width, height) / 2;
 var barBtn = document.querySelector(".js-toggle-btn-bar");
 var pieBtn = document.querySelector(".js-toggle-btn-pie");
