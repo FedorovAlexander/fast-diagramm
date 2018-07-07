@@ -83,3 +83,4 @@ function piechart() {
   }
   chartLegend();
 }
+filters()
