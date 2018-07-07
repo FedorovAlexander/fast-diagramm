@@ -22,21 +22,21 @@ piechart()
 
 function piechart() {
 
-
-
-  var arc = d3.arc()
-      .outerRadius(radius - 30)
-      .innerRadius(0);
-
   var pie = d3.pie()
       .sort(null)
       .value(function(d,i) { return d; });
+
+  var arc = d3.arc()
+      .outerRadius(radius - 30)
+      .innerRadius(0)
+      .padAngle(0);
 
   var svg = d3.select(".result__output-chart").append("svg")
       .attr("width", width)
       .attr("height", height)
       .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
 
   // join
   var block = svg.selectAll(".arc")
