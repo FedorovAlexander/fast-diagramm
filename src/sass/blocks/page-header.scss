@@ -2,11 +2,16 @@
   background-color: #fff;
   margin-bottom: 20px;
   &__container {
-
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 .main-title {
   display: inline-block;
   font-size: 28px;
   line-height: 28px;
+}
+
+.title-description {
+  padding-left: 32px;
 }
