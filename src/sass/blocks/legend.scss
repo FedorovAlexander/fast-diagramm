@@ -1,20 +1,22 @@
 .legend {
   &__item {
-    position: relative;
-    padding-left: 25px;
     display: none;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    position: relative;
     border: 1px solid transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 25px;
   }
+
   &__item-color {
     position: absolute;
     top: 0.625rem;
     left: 3px;
   }
+
   &__item-name {
+    display: inline-block;
     max-width: 150px;
     word-wrap: break-word;
-    display: inline-block;
   }
 }
