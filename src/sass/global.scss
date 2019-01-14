@@ -10,6 +10,8 @@ body {
   background-color: $main-bg-color;
   font-family: $font-family;
   color: $text-color;
+  height: 100vh;
+  background-image: url(../../img/pattern.jpg);
 }
 .active {
   background: green;
