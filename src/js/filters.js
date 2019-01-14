@@ -5,8 +5,38 @@ function filters() {
   const result = document.querySelector('.result__output');
   const resultTitle = document.querySelector('.result__output-title');
   const legendItem = document.querySelectorAll('.legend__item');
+  const colorDefault = d3.scaleOrdinal(d3.schemeSet3);
+  const colorFoo = d3.scaleOrdinal(d3.schemeSet2);
+  const colorMoo = d3.scaleOrdinal(d3.schemeSet1);
+  const colorHaiku = d3.scaleOrdinal(['#466874', '#958840', '#71c34a', '#a8c1b1', '#5d604c', '#92a95e', '#4e814c', '#7f2967', '#a85245', '#00595f'])
+  const colorSet = [colorDefault, colorHaiku, colorFoo, colorMoo];
 
   var radius = Math.min(width, height) / 2;
+
+  function colorButtons() {
+    var button1 = document.querySelector('.filters__item--1')
+    var button2 = document.querySelector('.filters__item--2')
+    var button3 = document.querySelector('.filters__item--3')
+    var button4 = document.querySelector('.filters__item--4')
+    var colorSpan1 = button1.querySelectorAll('.filters__item-color')
+    var colorSpan2 = button2.querySelectorAll('.filters__item-color')
+    var colorSpan3 = button3.querySelectorAll('.filters__item-color')
+    var colorSpan4 = button4.querySelectorAll('.filters__item-color')
+    colorSpan1.forEach(function(item, i) {
+      item.style.backgroundColor = colorDefault(i)
+    })
+    colorSpan2.forEach(function(item, i) {
+      item.style.backgroundColor = colorHaiku(i)
+    })
+    colorSpan3.forEach(function(item, i) {
+      item.style.backgroundColor = colorFoo(i)
+    })
+    colorSpan4.forEach(function(item, i) {
+      item.style.backgroundColor = colorMoo(i)
+    })
+  }
+
+  colorButtons();
 
   function firstDesign() {
     var itemColor = document.querySelectorAll('.legend__color')
