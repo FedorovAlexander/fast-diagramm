@@ -1,49 +1,88 @@
 .input-block {
   display: flex;
+  flex: 2;
   flex-direction: column;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin-right: 20px;
   background-color: #fff;
-  flex: 2;
-  padding-right: 15px;
-  padding-left: 15px;
   padding-top: 15px;
+  padding-right: 15px;
   padding-bottom: 15px;
-  &__title {
+  padding-left: 15px;
 
+  &__input-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
   }
+
+  &__input-title:focus {
+    border-bottom: 1px solid lightblue;
+    box-shadow: 0 2px 1px -1px lightblue;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
   &__wrapper {
-    flex: 5;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
   }
+
   &__item {
     max-width: 80px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 17px;
   }
+
+  &__item:focus {
+    border-bottom: 1px solid lightblue;
+    box-shadow: 0 2px 1px -1px lightblue;
+  }
+
   &__label {
+    margin-bottom: 7px;
     max-width: 100%;
-    margin-bottom: 2px;
+
   }
+
   &__data {
+    display: flex;
     flex: 2;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
+
   &__names-block {
-    flex: 4;
     display: flex;
+    flex: 4;
     flex-direction: column;
     justify-content: flex-start;
   }
+
   &__name {
     width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 17px;
   }
-  &__input-title-block {
-    flex:1;
 
+  &__name:focus {
+    border-bottom: 1px solid lightblue;
+    box-shadow: 0 2px 1px -1px lightblue;
+  }
+
+  &__input-title-block {
+    flex: 1;
   }
 }
