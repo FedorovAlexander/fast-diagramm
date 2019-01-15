@@ -77,11 +77,67 @@ function filters() {
   })
 
   document.querySelector('.filters__item--1').addEventListener('click', function () {
+    newArc = d3.arc()
+		.outerRadius(radius - 30)
+		.innerRadius(0)
+    .padAngle(0);
+    
+    d3.selectAll(".arc path").attr("d", newArc)
+
+    var filterItems = document.querySelectorAll('.filters__item');
+    filterItems.forEach(function(item) {
+      item.classList.remove('filters__item--active')
+    })
+    this.classList.add('filters__item--active')
     firstDesign()
   })
 
   document.querySelector('.filters__item--2').addEventListener('click', function () {
+    newArc = d3.arc()
+		.outerRadius(radius - 30)
+		.innerRadius((radius - 30) / 2)
+    .padAngle(0.02);
+    
+    d3.selectAll(".arc path").attr("d", newArc)
+
+    var filterItems = document.querySelectorAll('.filters__item');
+    filterItems.forEach(function(item) {
+      item.classList.remove('filters__item--active')
+    })
+    this.classList.add('filters__item--active')
     secondDesign()
+  })
+
+  document.querySelector('.filters__item--3').addEventListener('click', function () {
+    newArc = d3.arc()
+		.outerRadius(radius - 30)
+		.innerRadius(10)
+    .padAngle(0.08);
+    
+    d3.selectAll(".arc path").attr("d", newArc)
+
+    var filterItems = document.querySelectorAll('.filters__item');
+    filterItems.forEach(function(item) {
+      item.classList.remove('filters__item--active')
+    })
+    this.classList.add('filters__item--active')
+
+  })
+
+  document.querySelector('.filters__item--4').addEventListener('click', function () {
+    newArc = d3.arc()
+		.outerRadius(radius - 30)
+		.innerRadius(150)
+    .padAngle(0.01);
+    
+    d3.selectAll(".arc path").attr("d", newArc)
+
+    var filterItems = document.querySelectorAll('.filters__item');
+    filterItems.forEach(function(item) {
+      item.classList.remove('filters__item--active')
+    })
+    this.classList.add('filters__item--active')
+
   })
 
   filtersBtn.on("click", function (_, i) {
