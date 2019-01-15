@@ -15,7 +15,7 @@
   }
 
   &__item {
-    opacity: 0.7;
+    opacity: 0.3;
     margin-right: 3px;
     margin-bottom: 8px;
     margin-left: 3px;
@@ -24,6 +24,10 @@
     background-color: #dcdee2;
     transition: opacity 0.2s linear;
     font-size: 0;
+  }
+
+  &__item--active {
+    opacity: 1;
   }
 
   &__item:hover {
