@@ -95,7 +95,7 @@
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Document</title>
+  <title>FastCharts</title>
 </head>
 
 <body>
@@ -106,7 +106,7 @@
         <svg width="25" height="25" class="title-icon"><use xlink:href="#business"></use></svg>
         FastCharts
       </h1>
-      <p class="title-description">Сделать и скачать диаграмму по-быстрому</p>
+      <p class="title-description">Create a pie chart</p>
     </div>
 
 
@@ -116,12 +116,12 @@
       <div class="chart__container container" id="container">
         <div class="input-block">
           <div class="input-block__input-title-block">
-            <h4 class="input-block__input-chart-title">Введи название диаграммы</h4>
+            <h4 class="input-block__input-chart-title">Chart Title</h4>
             <label for="" class="input-block__label"><input type="text" class="input-block__input-title" oninput="titleInput()"></label>
           </div>
           <div class="input-block__wrapper">
             <div class="input-block__data">
-              <h4 class="input-block__title">Данные</h4>
+              <h4 class="input-block__title">Data</h4>
               <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--1"></label>
               <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--2"></label>
               <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--3"></label>
@@ -134,7 +134,7 @@
               <label for="" class="input-block__label"><input type="text" value="" class="input-block__item input-block__item--10"></label>
             </div>
             <div class="input-block__names-block">
-              <h4 class="input-block__title">Обозначения</h4>
+              <h4 class="input-block__title">Name</h4>
               <label for="" class="input-block__label"><input type="text" class="input-block__name input-block__name--1" oninput="nameInput()"></label>
               <label for="" class="input-block__label"><input type="text" class="input-block__name input-block__name--2" oninput="nameInput()"></label>
               <label for="" class="input-block__label"><input type="text" class="input-block__name input-block__name--3" oninput="nameInput()"></label>
@@ -148,23 +148,61 @@
             </div>
           </div>
           <div class="input-block__names-block filters">
-            <h4 class="input-block__title">Фильтры</h2>
+            <h4 class="input-block__title">Filters</h2>
             <div class="filters__items-block">
-              <a href="#" class="filters__item filters__item--1">1</a>
-              <a href="#" class="filters__item filters__item--2">2</a>
-              <a href="#" class="filters__item filters__item--3">3</a>
-              <a href="#" class="filters__item filters__item--4">4</a>
-              <a href="#" class="filters__item filters__item--5">5</a>
-              <a href="#" class="filters__item filters__item--6">6</a>
-              <a href="#" class="filters__item filters__item--7">7</a>
-              <a href="#" class="filters__item filters__item--8">8</a>
-              <a href="#" class="filters__item filters__item--9">9</a>
-              <a href="#" class="filters__item filters__item--10">10</a>
+              <a href="#" class="filters__item filters__item--1 filters__item--active">
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+            </a>
+            <a href="#" class="filters__item filters__item--2">
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+            </a>
+            <a href="#" class="filters__item filters__item--3">
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+            </a>
+            <a href="#" class="filters__item filters__item--4">
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+              <span class="filters__item-color"></span>
+            </a>
             </div>
           </div>
         </div>
         <div class="result" id="result">
-          <h2 class="result__title">Результат</h2>
+          <h2 class="result__title"></h2>
             <div class="result__output" id="result__output">
               <h3 class="result__output-title"></h3>
               <div class="result__chart-legend-block">
@@ -214,7 +252,7 @@
               </div>
 
             </div>
-            <button href="#" id='saveButton'>Скачать PNG</button>
+            <button href="#" id='saveButton' class="result__download-button">Download PNG</button>
 
         </div>
 
