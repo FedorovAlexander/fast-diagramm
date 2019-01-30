@@ -11,7 +11,7 @@ body {
   font-family: "Open Sans_my", sans-serif;
   color: #000;
   height: 100vh;
-  background-image: url(../../img/pattern.jpg); }
+  background-image: url(../img/pattern.jpg); }
 
 .active {
   background: green; }
