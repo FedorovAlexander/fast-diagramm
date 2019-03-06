@@ -10,6 +10,10 @@ function filters() {
   const colorMoo = d3.scaleOrdinal(d3.schemeSet1);
   const colorHaiku = d3.scaleOrdinal(['#466874', '#958840', '#71c34a', '#a8c1b1', '#5d604c', '#92a95e', '#4e814c', '#7f2967', '#a85245', '#00595f'])
   const colorSet = [colorDefault, colorHaiku, colorFoo, colorMoo];
+  var newArc1 = d3.arc().outerRadius(radius - 30).innerRadius(0).padAngle(0);
+  var newArc2 = d3.arc().outerRadius(radius - 30).innerRadius((radius - 30) / 2).padAngle(0.02);
+  var newArc3 = d3.arc().outerRadius(radius - 30).innerRadius(10).padAngle(0.08);
+  var newArc4 = d3.arc().outerRadius(radius - 30).innerRadius(150).padAngle(0.01);
 
   var radius = Math.min(width, height) / 2;
 
@@ -126,18 +130,16 @@ function filters() {
 
   document.querySelector('.filters__item--4').addEventListener('click', function () {
     newArc = d3.arc()
-		.outerRadius(radius - 30)
-		.innerRadius(150)
+    .outerRadius(radius - 30)
+    .innerRadius(150)
     .padAngle(0.01);
     
     d3.selectAll(".arc path").attr("d", newArc)
-
     var filterItems = document.querySelectorAll('.filters__item');
     filterItems.forEach(function(item) {
       item.classList.remove('filters__item--active')
     })
     this.classList.add('filters__item--active')
-
   })
 
   filtersBtn.on("click", function (_, i) {
@@ -149,3 +151,5 @@ function filters() {
     })
   });
 }
+
+

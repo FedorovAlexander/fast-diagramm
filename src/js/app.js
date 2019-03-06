@@ -30,7 +30,19 @@ function piechart() {
 
 	var arc = d3.arc()
 		.outerRadius(radius - 30)
-		.innerRadius(0)
+		.innerRadius(function() {
+			if (document.querySelector('.filters__item--1').classList.contains('filters__item--active')) {
+				return 0;
+			} else if (document.querySelector('.filters__item--2').classList.contains('filters__item--active')) {
+				return (radius - 30) / 2;
+			} else if (document.querySelector('.filters__item--3').classList.contains('filters__item--active')) {
+				return 10;
+			} else if (document.querySelector('.filters__item--4').classList.contains('filters__item--active')) {
+				return 150;
+			} else {
+				console.log('woof')
+			}
+		})
 		.padAngle(0);
 
 	var svg = d3.select('.result__output-chart').append('svg')
