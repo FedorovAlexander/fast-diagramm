@@ -38,7 +38,7 @@ function piechart() {
 			} else if (document.querySelector('.filters__item--3').classList.contains('filters__item--active')) {
 				return 10;
 			} else if (document.querySelector('.filters__item--4').classList.contains('filters__item--active')) {
-				return 150;
+				return 120;
 			} else {
 				console.log('woof')
 			}

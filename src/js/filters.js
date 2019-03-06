@@ -46,7 +46,7 @@ function filters() {
     var itemColor = document.querySelectorAll('.legend__color')
     itemColor.forEach(function (item) {
       item.classList.add('border-radius-none')
-      item.classList.remove('border-radius')
+      item.classList.remove('border-radius-50')
     })
     resultTitle.classList.add('design-title-1');
     resultTitle.classList.remove('design-title-2');
@@ -62,7 +62,7 @@ function filters() {
     var itemColor = document.querySelectorAll('.legend__color')
     itemColor.forEach(function (item) {
       item.classList.remove('border-radius-none')
-      item.classList.add('border-radius')
+      item.classList.add('border-radius-50')
     })
     resultTitle.classList.remove('design-title-1');
     resultTitle.classList.add('design-title-2');
@@ -71,6 +71,20 @@ function filters() {
     legendItem.forEach(function (item) {
       item.style.borderBottom = '1px solid #f0f0f0'
     })
+  }
+
+  function thirdDesign() {
+    result.style.backgroundColor = "#ffffff";
+  }
+
+  function fourthDesign() {
+    var itemColor = document.querySelectorAll('.legend__color')
+    itemColor.forEach(function (item) {
+      item.classList.add('border-radius-20')
+      item.classList.remove('border-radius-50')
+      item.classList.remove('border-radius-none')
+    })
+    result.style.backgroundColor = "#f1f1f1";
   }
 
   //prevent default action
@@ -125,13 +139,13 @@ function filters() {
       item.classList.remove('filters__item--active')
     })
     this.classList.add('filters__item--active')
-
+    thirdDesign();
   })
 
   document.querySelector('.filters__item--4').addEventListener('click', function () {
     newArc = d3.arc()
     .outerRadius(radius - 30)
-    .innerRadius(150)
+    .innerRadius(120)
     .padAngle(0.01);
     
     d3.selectAll(".arc path").attr("d", newArc)
@@ -140,6 +154,7 @@ function filters() {
       item.classList.remove('filters__item--active')
     })
     this.classList.add('filters__item--active')
+    fourthDesign();
   })
 
   filtersBtn.on("click", function (_, i) {
