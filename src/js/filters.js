@@ -3,7 +3,7 @@ function filters() {
   const filtersBtnAll = document.querySelectorAll(".filters__item");
   const colorBtn1 = d3.selectAll(".filters__item--2");
   const result = document.querySelector('.result__output');
-  const resultTitle = document.querySelector('.result__output-title');
+  const resultTitle = document.querySelector('.result__output-title-wrap');
   const legendItem = document.querySelectorAll('.legend__item');
   const colorDefault = d3.scaleOrdinal(d3.schemeSet3);
   const colorFoo = d3.scaleOrdinal(d3.schemeSet2);
@@ -47,9 +47,11 @@ function filters() {
     itemColor.forEach(function (item) {
       item.classList.add('border-radius-none')
       item.classList.remove('border-radius-50')
+      item.classList.remove('border-radius-20')
     })
     resultTitle.classList.add('design-title-1');
     resultTitle.classList.remove('design-title-2');
+    resultTitle.classList.remove('design-title-4');
     result.style.backgroundColor = '#fff';
 
     legendItem.forEach(function (item) {
@@ -62,10 +64,12 @@ function filters() {
     var itemColor = document.querySelectorAll('.legend__color')
     itemColor.forEach(function (item) {
       item.classList.remove('border-radius-none')
+      item.classList.remove('border-radius-20')
       item.classList.add('border-radius-50')
     })
     resultTitle.classList.remove('design-title-1');
     resultTitle.classList.add('design-title-2');
+    resultTitle.classList.remove('design-title-4');
     result.style.backgroundColor = '#fff';
 
     legendItem.forEach(function (item) {
@@ -84,6 +88,9 @@ function filters() {
       item.classList.remove('border-radius-50')
       item.classList.remove('border-radius-none')
     })
+    resultTitle.classList.add('design-title-4');
+    resultTitle.classList.remove('design-title-1');
+    resultTitle.classList.remove('design-title-2');
     result.style.backgroundColor = "#f1f1f1";
   }
 

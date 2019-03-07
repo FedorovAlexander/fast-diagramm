@@ -60,6 +60,21 @@
   font-size: 2rem;
 }
 
+.design-title-4 {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: #838383;
+  font-size: 2rem;
+}
+
+.design-title-4>h3 {
+  position: absolute;
+  max-width: 270px;
+  font-size: 1.5rem;
+}
+
 .border-radius-50 {
   border-radius: 50%;
 }
