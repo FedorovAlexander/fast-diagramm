@@ -3,6 +3,7 @@ function filters() {
   const filtersBtnAll = document.querySelectorAll(".filters__item");
   const colorBtn1 = d3.selectAll(".filters__item--2");
   const result = document.querySelector('.result__output');
+  const legend = document.querySelector('.legend');
   const resultTitle = document.querySelector('.result__output-title-wrap');
   const legendItem = document.querySelectorAll('.legend__item');
   const colorDefault = d3.scaleOrdinal(d3.schemeSet3);
@@ -92,6 +93,7 @@ function filters() {
     resultTitle.classList.remove('design-title-1');
     resultTitle.classList.remove('design-title-2');
     result.style.backgroundColor = "#f1f1f1";
+    legend.style.marginTop = "70px";
   }
 
   //prevent default action
