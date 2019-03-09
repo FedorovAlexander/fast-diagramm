@@ -62,19 +62,26 @@
 
 .design-title-4 {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 3.65rem;
-  text-align: left;
+  position: absolute;
+  top: 146px;
+  left: 115px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 270px;
+  height: 270px; 
+  text-align: justify;
   color: #838383;
   font-size: 2rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .design-title-4>h3 {
-  position: absolute;
-  max-width: 270px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
   font-size: 1.5rem;
+  position: unset;
 }
 
 .border-radius-50 {
