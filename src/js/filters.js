@@ -46,6 +46,7 @@ function filters() {
     })
     resultTitle.classList.add('design-title-1');
     resultTitle.classList.remove('design-title-2');
+    resultTitle.classList.remove('design-title-3');
     resultTitle.classList.remove('design-title-4');
     result.style.backgroundColor = '#fff';
 
@@ -62,8 +63,9 @@ function filters() {
       item.classList.remove('border-radius-20')
       item.classList.add('border-radius-50')
     })
-    resultTitle.classList.remove('design-title-1');
     resultTitle.classList.add('design-title-2');
+    resultTitle.classList.remove('design-title-1');
+    resultTitle.classList.remove('design-title-3');
     resultTitle.classList.remove('design-title-4');
     result.style.backgroundColor = '#fff';
 
@@ -74,6 +76,11 @@ function filters() {
 
   function thirdDesign() {
     result.style.backgroundColor = "#ffffff";
+    resultTitle.classList.add('design-title-3');
+    resultTitle.classList.remove('design-title-1');
+    resultTitle.classList.remove('design-title-2');
+    resultTitle.classList.remove('design-title-4');
+    result.style.backgroundColor = '#fff';
   }
 
   function fourthDesign() {
@@ -86,6 +93,7 @@ function filters() {
     resultTitle.classList.add('design-title-4');
     resultTitle.classList.remove('design-title-1');
     resultTitle.classList.remove('design-title-2');
+    resultTitle.classList.remove('design-title-3');
     result.style.backgroundColor = "#f1f1f1";
   }
 
