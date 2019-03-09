@@ -154,7 +154,7 @@ function filters() {
   document.querySelector('.filters__item--4').addEventListener('click', function () {
     newArc = d3.arc()
     .outerRadius(radius - 30)
-    .innerRadius(120)
+    .innerRadius(170)
     .padAngle(0.01);
     
     d3.selectAll(".arc path").attr("d", newArc)
