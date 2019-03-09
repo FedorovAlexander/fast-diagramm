@@ -1,7 +1,6 @@
 function filters() {
   const filtersBtn = d3.selectAll(".filters__item");
   const filtersBtnAll = document.querySelectorAll(".filters__item");
-  const colorBtn1 = d3.selectAll(".filters__item--2");
   const result = document.querySelector('.result__output');
   const legend = document.querySelector('.legend');
   const resultTitle = document.querySelector('.result__output-title-wrap');
@@ -11,11 +10,6 @@ function filters() {
   const colorMoo = d3.scaleOrdinal(d3.schemeSet1);
   const colorHaiku = d3.scaleOrdinal(['#466874', '#958840', '#71c34a', '#a8c1b1', '#5d604c', '#92a95e', '#4e814c', '#7f2967', '#a85245', '#00595f'])
   const colorSet = [colorDefault, colorHaiku, colorFoo, colorMoo];
-  var newArc1 = d3.arc().outerRadius(radius - 30).innerRadius(0).padAngle(0);
-  var newArc2 = d3.arc().outerRadius(radius - 30).innerRadius((radius - 30) / 2).padAngle(0.02);
-  var newArc3 = d3.arc().outerRadius(radius - 30).innerRadius(10).padAngle(0.08);
-  var newArc4 = d3.arc().outerRadius(radius - 30).innerRadius(150).padAngle(0.01);
-
   var radius = Math.min(width, height) / 2;
 
   function colorButtons() {
