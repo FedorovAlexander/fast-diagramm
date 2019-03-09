@@ -87,7 +87,6 @@ function filters() {
     resultTitle.classList.remove('design-title-1');
     resultTitle.classList.remove('design-title-2');
     result.style.backgroundColor = "#f1f1f1";
-    legend.style.marginTop = "70px";
   }
 
   //prevent default action
