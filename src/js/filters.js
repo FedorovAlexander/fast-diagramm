@@ -7,7 +7,7 @@ function filters() {
   const legendItem = document.querySelectorAll('.legend__item');
   const colorDefault = d3.scaleOrdinal(d3.schemeSet3);
   const colorFoo = d3.scaleOrdinal(d3.schemeSet2);
-  const colorMoo = d3.scaleOrdinal(d3.schemeSet1);
+  const colorMoo = d3.scaleOrdinal(d3.schemePaired);
   const colorHaiku = d3.scaleOrdinal(['#466874', '#958840', '#71c34a', '#a8c1b1', '#5d604c', '#92a95e', '#4e814c', '#7f2967', '#a85245', '#00595f'])
   const colorSet = [colorDefault, colorHaiku, colorFoo, colorMoo];
   var radius = Math.min(width, height) / 2;
