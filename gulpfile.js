@@ -135,6 +135,7 @@ gulp.task('js', function () {
       dirs.source + '/js/pushData.js',
       dirs.source + '/js/pushName.js',
       dirs.source + '/js/filters.js',
+      dirs.source + '/js/digitsValidation.js',
       dirs.source + '/js/app.js',
       dirs.source + '/js/script.js',
     ])
