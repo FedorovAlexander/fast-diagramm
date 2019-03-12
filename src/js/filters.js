@@ -52,7 +52,6 @@ function filters() {
 
     legendItem.forEach(function (item) {
       item.style.borderBottom = '1px solid transparent';
-
     })
   }
 
@@ -75,6 +74,12 @@ function filters() {
   }
 
   function thirdDesign() {
+    var itemColor = document.querySelectorAll('.legend__color')
+    itemColor.forEach(function (item) {
+      item.classList.add('border-radius-20')
+      item.classList.remove('border-radius-50')
+      item.classList.remove('border-radius-none')
+    })
     result.style.backgroundColor = "#ffffff";
     resultTitle.classList.add('design-title-3');
     resultTitle.classList.remove('design-title-1');
