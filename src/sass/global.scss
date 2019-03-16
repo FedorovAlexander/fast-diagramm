@@ -4,20 +4,17 @@
   padding: 0;
 }
 body {
-  font-size: 16px;
-  min-width: 320px;
   margin: 0;
-  background-color: $main-bg-color;
-  font-family: $font-family;
-  color: $text-color;
+  min-width: 320px;
   height: 100vh;
+  background-color: $main-bg-color;
   background-image: url(../img/pattern.jpg);
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 16px;
 }
 .active {
   background: green;
-}
-.container {
-  // background-color: #fff;
 }
 
 h1, h2, h3, h4, h5 {
