@@ -1,15 +1,19 @@
 .page-header {
-  background-color: #fff;
+  position: fixed;
   margin-bottom: 20px;
+  width: 100%;
+  background-color: #fff;
+
   &__container {
     padding-top: 5px;
     padding-bottom: 5px;
   }
 }
+
 .main-title {
   display: inline-block;
-  font-size: 28px;
   line-height: 28px;
+  font-size: 28px;
 }
 
 .title-description {
